@@ -6,7 +6,7 @@
     <label>animal hemogen pack</label>
     <description>A package of refined animal hemogen in a specialized container that prevents spoilage. Hemogenic humans can consume it to restore their internal hemogen stores. It can be administered via an operation to reverse blood loss. Animal hemogen is less effective than human hemogen, and may be considered better or worse by some factions.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/HemogenPack</texPath>
+      <texPath>AnimalHemogenPack</texPath>
     </graphicData>
     <ingestible>
       <specialThoughtDirect>IngestedHemogenPack</specialThoughtDirect>
