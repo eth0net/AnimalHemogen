@@ -8,10 +8,10 @@ Harvest hemogen from your poor unfortunate animals!
 
 - Use animals as an alternative source of hemogen packs
 - Animal hemogen is less effective than human hemogen
+- Added support for bloodfeeding directly from animals
 
 ## Future Plans
 
-- Bloodfeed on animals
 - Ideoligion precepts for views on animal hemogen harvesting
 
 ## Existing Saves
