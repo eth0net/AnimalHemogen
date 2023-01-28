@@ -1,17 +1,16 @@
-﻿using HarmonyLib;
-using Verse;
+﻿using Verse;
 
-namespace AnimalHemogen
+namespace AnimalHemogen.Harmony
 {
     /// <summary>
-    /// AnimalHemogen static class to load up the mod.
+    /// Patcher static class to apply harmony patches.
     /// </summary>
     [StaticConstructorOnStartup]
-    public static class AnimalHemogen {
+    public static class Patcher {
         /// <summary>
-        /// AnimalHemogen constructor to patch things using harmony.
+        /// Patcher constructor to patch things using harmony.
         /// </summary>
-        static AnimalHemogen()
+        static Patcher()
         {
             var harmony = new HarmonyLib.Harmony("eth0net.AnimalHemogen.harmony");
             harmony.PatchAll();
