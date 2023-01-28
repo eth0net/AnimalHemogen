@@ -11,6 +11,11 @@ namespace AnimalHemogen.Harmony
     internal static class Harmony_SanguophageUtility_DoBite
     {
         /// <summary>
+        /// Load a reference to mod settings.
+        /// </summary>
+        static readonly AnimalHemogenSettings settings = LoadedModManager.GetMod<AnimalHemogen>().GetSettings<AnimalHemogenSettings>();
+
+        /// <summary>
         /// Prefix patches bloodfeed to count animals as valid.
         /// </summary>
         /// <param name="__instance"></param>
@@ -18,7 +23,7 @@ namespace AnimalHemogen.Harmony
         {
             if (victim == null || !victim.RaceProps.Animal) return;
 
-            targetHemogenGain *= 0.5f;
+            targetHemogenGain *= settings.animalHemogenRate;
         }
     }
 }

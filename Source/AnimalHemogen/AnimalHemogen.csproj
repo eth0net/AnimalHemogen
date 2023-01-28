@@ -54,6 +54,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalHemogen.cs" />
+    <Compile Include="AnimalHemogenSettings.cs" />
     <Compile Include="Harmony\Harmony_CompAbilityEffect_BloodfeederBite.cs" />
     <Compile Include="Harmony\Harmony_SanguophageUtility_DoBite.cs" />
     <Compile Include="Harmony\Patcher.cs" />
