@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -51,8 +55,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimalHemogen.cs" />
+    <Compile Include="Harmony\Harmony_CompAbilityEffect_BloodfeederBite.cs" />
+    <Compile Include="Harmony\Harmony_SanguophageUtility_DoBite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recipe_ExtractAnimalHemogen.cs" />
+    <Compile Include="Recipes\Recipe_ExtractAnimalHemogen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

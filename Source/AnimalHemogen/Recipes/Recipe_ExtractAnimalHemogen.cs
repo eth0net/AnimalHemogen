@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace AnimalHemogen
+namespace AnimalHemogen.Recipes
 {
     internal class Recipe_ExtractAnimalHemogen : Recipe_ExtractHemogen
     {
