@@ -21,7 +21,7 @@ namespace AnimalHemogen
             {
                 if (!pawn.IsBloodfeeder() || (!pawn.IsPrisonerOfColony && !pawn.IsSlaveOfColony && !pawn.IsColonist)) continue;
 
-                CompBloodfeederDiet diet = p.GetComp<CompBloodfeederDiet>();
+                CompBloodfeederDiet diet = pawn.GetComp<CompBloodfeederDiet>();
                 if (diet == null) continue;
 
                 if (diet.IsHumanBlood) { state = ThoughtState.ActiveAtStage(1); break; }
