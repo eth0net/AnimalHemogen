@@ -5,10 +5,10 @@ using Verse;
 namespace AnimalHemogen.Harmony
 {
     /// <summary>
-    /// Harmony_CompAbilityEffect_BloodfeederBite_Valid patches bloodfeed to work with animals.
+    /// Harmony_IngestionOutcomeDoer_OffsetHemogen_DoIngestionOutcomeSpecial patches hemogen packs to update the diet comp.
     /// </summary>
-    [HarmonyPatch(typeof(IngestionOutcomeDoer_OffsetHemogen), nameof(IngestionOutcomeDoer_OffsetHemogen.DoIngestionOutcome))]
-    internal static class Harmony_IngestionOutcomeDoer_OffsetHemogen_DoIngestionOutcome
+    [HarmonyPatch(typeof(IngestionOutcomeDoer_OffsetHemogen), "DoIngestionOutcomeSpecial")]
+    internal static class Harmony_IngestionOutcomeDoer_OffsetHemogen_DoIngestionOutcomeSpecial
     {
         /// <summary>
         /// Postfix patches ingesting hemogen packs to update the diet comp.
