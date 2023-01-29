@@ -88,8 +88,8 @@
     <workerClass>AnimalHemogen.ThoughtWorker_Precept_IsBloodfeeder_AnimalsOnly</workerClass>
     <stages>
       <li>
-        <label>animal bloodfeeder</label>
-        <description>I will only drink from animals, I must not become that which I hate.</description>
+        <label>animal bloodfeeder self anxiety</label>
+        <description>I will only drink from animals, I must not become what I hate.</description>
         <baseMoodEffect>-2</baseMoodEffect>
       </li>
       <li>
@@ -112,7 +112,7 @@
         <baseMoodEffect>2</baseMoodEffect>
       </li>
       <li>
-        <label>bloodfeeder among us</label>
+        <label>human bloodfeeder among us</label>
         <description>A monster is among us. We should expel the human bloodfeeder from our home.</description>
         <baseMoodEffect>-8</baseMoodEffect>
       </li>
