@@ -2,8 +2,8 @@
 <Configuration>
   <Excluded>
     <exclude>.git</exclude>
+    <exclude>AnimalHemogen.textstudio</exclude>
     <exclude>Images</exclude>
     <exclude>Source</exclude>
-    <exclude>AnimalHemogen.textstudio</exclude>
   </Excluded>
 </Configuration>
