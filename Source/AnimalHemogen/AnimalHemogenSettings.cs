@@ -15,7 +15,7 @@ namespace AnimalHemogen
         /// <summary>
         /// Minimum number of days since human bloodfeeding.
         /// </summary>
-        public int daysSinceHumanBloodThreshold = 3;
+        public float daysSinceHumanBloodThreshold = 3f;
 
         /// <summary>
         /// Minimum number of feeds since human bloodfeeding.
@@ -28,7 +28,7 @@ namespace AnimalHemogen
         public override void ExposeData()
         {
             Scribe_Values.Look(ref animalHemogenRate, "animalHemogenRate", 0.5f, false);
-            Scribe_Values.Look(ref daysSinceHumanBloodThreshold, "daysSinceHumanBloodThreshold", 3, false);
+            Scribe_Values.Look(ref daysSinceHumanBloodThreshold, "daysSinceHumanBloodThreshold", 3f, false);
             Scribe_Values.Look(ref feedsSinceHumanBloodThreshold, "feedsSinceHumanBloodThreshold", 3, false);
             base.ExposeData();
         }

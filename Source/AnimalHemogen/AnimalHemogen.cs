@@ -2,7 +2,6 @@
 using UnityEngine;
 using Verse;
 
-
 namespace AnimalHemogen
 {
     public class AnimalHemogen : Mod
@@ -33,6 +32,16 @@ namespace AnimalHemogen
 
             listing.Label("Animal hemogen rate: " + settings.animalHemogenRate.ToString("0.00") + "   Default: 0.50   (1.00 matches human hemogen)");
             settings.animalHemogenRate = listing.Slider(settings.animalHemogenRate, 0f, 2f);
+
+            listing.Gap();
+
+            listing.Label("Animal bloodfeeder requirements");
+
+            listing.Label("Days since human blood: " + settings.daysSinceHumanBloodThreshold.ToString("0.00") + "   Default: 3.00");
+            settings.daysSinceHumanBloodThreshold = listing.Slider(settings.daysSinceHumanBloodThreshold, 0f, 10f);
+            
+            listing.Label("Feeds since human blood: " + settings.feedsSinceHumanBloodThreshold.ToString("0") + "   Default: 3");
+            settings.feedsSinceHumanBloodThreshold = (int)listing.Slider(settings.feedsSinceHumanBloodThreshold, 0f, 10f);
 
             listing.End();
 
