@@ -56,11 +56,16 @@
   <ItemGroup>
     <Compile Include="AnimalHemogen.cs" />
     <Compile Include="AnimalHemogenSettings.cs" />
+    <Compile Include="CompBloodfeederDiet.cs" />
     <Compile Include="Harmony\Harmony_CompAbilityEffect_BloodfeederBite.cs" />
+    <Compile Include="Harmony\Harmony_IngestionOutcomeDoer_OffsetHemogen_DoIngestionOutcome.cs" />
     <Compile Include="Harmony\Harmony_SanguophageUtility_DoBite.cs" />
     <Compile Include="Harmony\Patcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recipes\Recipe_ExtractAnimalHemogen.cs" />
+    <Compile Include="Recipe_ExtractAnimalHemogen.cs" />
+    <Compile Include="ThoughtWorker_Precept_BloodfeederPresent_AnimalOnly.cs" />
+    <Compile Include="ThoughtWorker_Precept_Bloodfeeder_Social_AnimalsOnly.cs" />
+    <Compile Include="ThoughtWorker_Precept_IsBloodfeeder_AnimalsOnly.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -17,3 +17,5 @@ namespace AnimalHemogen.Harmony
         }
     }
 }
+
+// TODO: patch bloodfeed and hemogen consume calls to implement CompBloodfeederDiet methods
