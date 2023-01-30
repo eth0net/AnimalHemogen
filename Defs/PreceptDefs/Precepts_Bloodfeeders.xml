@@ -24,19 +24,23 @@
       <li Class="PreceptComp_KnowsMemoryThought">
         <eventDef>BloodfeederDied</eventDef>
         <thought>BloodfeederDied_AnimalOnly</thought>
+        <thoughtStageDescriptions>
+          <li>Animal bloodfeeder died</li>
+          <li>Human bloodfeeder died</li>
+        </thoughtStageDescriptions>
       </li>
       <li Class="PreceptComp_SituationalThought">
         <thought>Bloodfeeder_AnimalOnlyBloodfeeder</thought>
         <thoughtStageDescriptions>
-          <li>Animal bloodfeeder</li>
-          <li>Human bloodfeeder</li>
+          <li>Animal bloodfeeder self anxiety</li>
+          <li>Human bloodfeeder self hatred</li>
         </thoughtStageDescriptions>
       </li>
       <li Class="PreceptComp_SituationalThought">
         <thought>BloodfeederColonist_AnimalOnly</thought>
         <thoughtStageDescriptions>
-          <li>Animal bloodfeeder</li>
-          <li>Human bloodfeeder</li>
+          <li>Animal bloodfeeder among us</li>
+          <li>Human bloodfeeder among us</li>
         </thoughtStageDescriptions>
       </li>
     </comps>
