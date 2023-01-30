@@ -9,12 +9,17 @@ Harvest hemogen from your poor unfortunate animals!
 - Use animals as an alternative source of hemogen packs
 - Animal hemogen is less effective than human hemogen
 - Added support for bloodfeeding directly from animals
-- Ideoligion precept for animal hemogen bloodfeeders
+- Extra bloodfeeder precept for Ideology DLC (if present)
 
 ## Future Plans
 
 - Add traits for pawn-specific bloodfeeding preferences
 - Hazy plans on more expansive hemogen system
+
+## Recommended Mods
+
+- TastyHemo - Eat hemogen packs for food
+- Hemofungus - Produce hemogen from fungus
 
 ## Existing Saves
 
