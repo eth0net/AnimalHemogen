@@ -58,6 +58,7 @@
     <Compile Include="AnimalHemogenSettings.cs" />
     <Compile Include="CompBloodfeederDiet.cs" />
     <Compile Include="Harmony\Harmony_CompAbilityEffect_BloodfeederBite.cs" />
+    <Compile Include="Harmony\Harmony_HemogenExtractor.cs" />
     <Compile Include="Harmony\Harmony_IngestionOutcomeDoer_OffsetHemogen_DoIngestionOutcome.cs" />
     <Compile Include="Harmony\Harmony_SanguophageUtility_DoBite.cs" />
     <Compile Include="Harmony\Patcher.cs" />
