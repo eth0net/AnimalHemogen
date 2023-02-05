@@ -10,6 +10,7 @@ Harvest hemogen from your poor unfortunate animals!
 - Animal hemogen is less effective than human hemogen
 - Added support for bloodfeeding directly from animals
 - Extra bloodfeeder precept for Ideology DLC (if present)
+- Support for Hemogen Extractor and TastyHemo (if present)
 
 ## Future Plans
 
@@ -18,8 +19,9 @@ Harvest hemogen from your poor unfortunate animals!
 
 ## Recommended Mods
 
-- TastyHemo - Eat hemogen packs for food
 - Hemofungus - Produce hemogen from fungus
+- Hemogen Extractor - Improved hemogen production
+- TastyHemo - Eat hemogen packs for food
 
 ## Existing Saves
 

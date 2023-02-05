@@ -17,6 +17,7 @@ Commissioned in the RimWorld Mod Market
 - Animal hemogen is less effective than human hemogen
 - Added support for bloodfeeding directly from animals
 - Extra bloodfeeder precept for Ideology DLC (if present)
+- Support for Hemogen Extractor and TastyHemo (if present)
 
 == Future Plans ==
 
@@ -29,8 +30,9 @@ This mod should be safe to add or remove from saves!
 
 == Recommended Mods ==
 
-- TastyHemo - Eat hemogen packs for food
 - Hemofungus - Produce hemogen from fungus
+- Hemogen Extractor - Improved hemogen production
+- TastyHemo - Eat hemogen packs for food
 
 == Bugs and Requests ==
 
