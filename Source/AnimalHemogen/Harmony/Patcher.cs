@@ -1,4 +1,6 @@
-﻿using Verse;
+﻿using System;
+using System.Linq;
+using Verse;
 
 namespace AnimalHemogen.Harmony
 {
@@ -6,14 +8,22 @@ namespace AnimalHemogen.Harmony
     /// Patcher static class to apply harmony patches.
     /// </summary>
     [StaticConstructorOnStartup]
-    public static class Patcher {
+    public static class Patcher
+    {
+        private static readonly HarmonyLib.Harmony harmony = new("eth0net.AnimalHemogen.harmony");
+        private static readonly Lazy<HemogenExtractorAnimalPatches> hemogenExtractorPatch = new();
+
         /// <summary>
         /// Patcher constructor to patch things using harmony.
         /// </summary>
         static Patcher()
         {
-            var harmony = new HarmonyLib.Harmony("eth0net.AnimalHemogen.harmony");
             harmony.PatchAll();
+
+            if (LoadedModManager.RunningMods.Any(pack => pack.PackageId == "Uveren.HemogenExtractor"))
+            {
+                hemogenExtractorPatch.Value.Patch(harmony);
+            }
         }
     }
 }
