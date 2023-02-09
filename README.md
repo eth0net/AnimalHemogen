@@ -2,6 +2,13 @@
 
 Harvest hemogen from your poor unfortunate animals!
 
+![Hemogen Extractor Pair](./Images/HemogenExtractorPair.png)
+![Hemogen Packs](./Images/HemogenPacks.png)
+![Animal Hemogen Pack Info](./Images/AnimalHemogenPackInfo.png)
+![Bloodfed Muffalo](./Images/BloodfedMuffalo.png)
+![Animal Bloodfeeder Reaction](./Images/NeedsAnimalBloodfeeder.png)
+![Human Bloodfeeder Reaction](./Images/NeedsHumanBloodfeeder.png)
+
 **Commissioned in the RimWorld Mod Market**
 
 ## Features
