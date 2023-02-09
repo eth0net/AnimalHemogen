@@ -17,12 +17,13 @@ namespace AnimalHemogen.Harmony
         /// <param name="harmony"></param>
         public void Patch(HarmonyLib.Harmony harmony)
         {
-            MethodInfo humanlike = AccessTools.Method(nameof(HemogenExtractorPatches.Prefix_AddHumanlikeOrders));
+            MethodInfo humanlike = AccessTools.Method(typeof(HemogenExtractorPatches), nameof(HemogenExtractorPatches.Prefix_AddHumanlikeOrders));
             HarmonyMethod humanlikeOrAnimal = new(typeof(HemogenExtractorAnimalPatches), nameof(AllowHumanlikeOrAnimal));
             harmony.Patch(humanlike, transpiler: humanlikeOrAnimal);
 
-            MethodInfo spawn = AccessTools.Method(nameof(CompSpawnerHemogen.TryDoSpawn));
+            MethodInfo spawn = AccessTools.Method(typeof(CompSpawnerHemogen), nameof(CompSpawnerHemogen.TryDoSpawn));
             HarmonyMethod selectHemogen = new(typeof(HemogenExtractorAnimalPatches), nameof(SelectHemogen));
+            harmony.Patch(spawn, prefix: selectHemogen);
         }
 
         /// <summary>
@@ -31,8 +32,8 @@ namespace AnimalHemogen.Harmony
         /// <param name="instructions"></param>
         /// <returns></returns>
         internal static IEnumerable<CodeInstruction> AllowHumanlikeOrAnimal(IEnumerable<CodeInstruction> instructions) => instructions.MethodReplacer(
-            AccessTools.PropertyGetter(nameof(RaceProperties.Humanlike)),
-            AccessTools.Method(nameof(HemogenExtractorAnimalPatches.HumanlikeOrAnimal))
+            AccessTools.PropertyGetter(typeof(RaceProperties), nameof(RaceProperties.Humanlike)),
+            AccessTools.Method(typeof(HemogenExtractorAnimalPatches), nameof(HemogenExtractorAnimalPatches.HumanlikeOrAnimal))
         );
 
         /// <summary>
@@ -43,8 +44,7 @@ namespace AnimalHemogen.Harmony
         {
             __instance.PropsSpawner.thingToSpawn = hemogenPack;
 
-            Building_HemogenExtractor extractor = __instance.parent as Building_HemogenExtractor;
-            if (extractor == null) return;
+            if (__instance.parent is not Building_HemogenExtractor extractor) return;
 
             Pawn victim = extractor.InnerPawn;
             if (victim == null || !victim.RaceProps.Animal) return;

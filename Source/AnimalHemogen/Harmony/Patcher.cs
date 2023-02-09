@@ -20,10 +20,9 @@ namespace AnimalHemogen.Harmony
         {
             harmony.PatchAll();
 
-            if (LoadedModManager.RunningMods.Any(pack => pack.PackageId == "Uveren.HemogenExtractor"))
-            {
-                hemogenExtractorPatch.Value.Patch(harmony);
-            }
+            if (HemogenExtractorActive) hemogenExtractorPatch.Value.Patch(harmony);
         }
+
+        private static bool HemogenExtractorActive => ModsConfig.ActiveModsInLoadOrder.Any((mod) => mod.PackageIdPlayerFacing == "Uveren.HemogenExtractor");
     }
 }
