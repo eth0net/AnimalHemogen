@@ -18,6 +18,7 @@ Harvest hemogen from your poor unfortunate animals!
 - Added support for bloodfeeding directly from animals
 - Extra bloodfeeder precept for Ideology DLC (if present)
 - Support for Hemogen Extractor and TastyHemo (if present)
+- Animal variant for Buildable Blood Torches (if present)
 
 ## Future Plans
 
@@ -26,6 +27,7 @@ Harvest hemogen from your poor unfortunate animals!
 
 ## Recommended Mods
 
+- Buildable Blood Torches - Make your own blood torches
 - Hemofungus - Produce hemogen from fungus
 - Hemogen Extractor - Improved hemogen production
 - TastyHemo - Eat hemogen packs for food
