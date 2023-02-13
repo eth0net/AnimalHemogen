@@ -15,14 +15,13 @@ namespace AnimalHemogen.Harmony
         /// </summary>
         internal static void Postfix(Pawn pawn, Thing ingested)
         {
-            CompBloodfeederDiet diet = pawn.GetComp<CompBloodfeederDiet>();
-            if (diet == null) return;
+            CompBloodfeederDiet comp = pawn.GetComp<CompBloodfeederDiet>();
+            if (comp == null) return;
 
-            switch (ingested.def.defName)
+            switch (ingested.def.GetModExtension<BloodfeederDietModExtension>()?.diet)
             {
-                case "HemogenPack": diet.ConsumeHumanBlood(); break;
-                case "AnimalHemogenPack": diet.ConsumeAnimalBlood(); break;
-                default: diet.ConsumeHumanBlood(); break;
+                case "animal": comp.ConsumeAnimalBlood(); break;
+                case "human": comp.ConsumeHumanBlood(); break;
             };
         }
     }

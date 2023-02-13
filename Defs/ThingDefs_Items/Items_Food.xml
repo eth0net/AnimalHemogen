@@ -16,6 +16,11 @@
         </li>
       </outcomeDoers>
     </ingestible>
+    <modExtensions Inherit="False">
+      <li Class="AnimalHemogen.DietModExtension">
+        <diet>animal</diet>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 </Defs>

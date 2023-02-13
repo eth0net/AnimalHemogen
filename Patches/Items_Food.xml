@@ -5,4 +5,12 @@
     <attribute>Name</attribute>
     <value>HemogenPack</value>
   </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/ThingDef[defName="HemogenPack"]</xpath>
+    <value>
+      <li Class="AnimalHemogen.DietModExtension">
+        <diet>human</diet>
+      </li>
+    </value>
+  </Operation>
 </Patch>

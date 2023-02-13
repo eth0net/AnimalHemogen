@@ -29,17 +29,15 @@ namespace AnimalHemogen.Harmony
         /// <summary>
         /// Postfix patches bloodfeed to update the diet comp.
         /// </summary>
-        internal static void Postfix(Pawn biter, Pawn victim) {
+        internal static void Postfix(Pawn biter, Pawn victim)
+        {
             CompBloodfeederDiet diet = biter.GetComp<CompBloodfeederDiet>();
             if (diet == null) return;
 
-            if (victim.RaceProps.Animal)
+            switch (victim.RaceProps.Animal)
             {
-                diet.ConsumeAnimalBlood();
-            }
-            else
-            {
-                diet.ConsumeHumanBlood();
+                case true: diet.ConsumeAnimalBlood(); break;
+                case false: diet.ConsumeHumanBlood(); break;
             }
         }
     }
