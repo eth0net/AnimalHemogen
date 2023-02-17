@@ -40,16 +40,18 @@ namespace AnimalHemogen.Harmony
         /// SelectHemogen patches CompSpawnerHemogen.TryDoSpawn to switch the hemogen type spawned by the extractor.
         /// </summary>
         /// <param name="__instance"></param>
-        internal static void SelectHemogen(CompSpawnerHemogen __instance)
+        internal static void SelectHemogen(ThingComp __instance)
         {
-            __instance.PropsSpawner.thingToSpawn = hemogenPack;
+            if (__instance is not CompSpawnerHemogen comp) return;
 
-            if (__instance.parent is not Building_HemogenExtractor extractor) return;
+            comp.PropsSpawner.thingToSpawn = hemogenPack;
+
+            if (comp.parent is not Building_HemogenExtractor extractor) return;
 
             Pawn victim = extractor.InnerPawn;
             if (victim == null || !victim.RaceProps.Animal) return;
 
-            __instance.PropsSpawner.thingToSpawn = animalHemogenPack;
+            comp.PropsSpawner.thingToSpawn = animalHemogenPack;
         }
 
         /// <summary>
