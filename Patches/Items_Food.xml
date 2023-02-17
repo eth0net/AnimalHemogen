@@ -8,7 +8,7 @@
   <Operation Class="PatchOperationAddModExtension">
     <xpath>/Defs/ThingDef[defName="HemogenPack"]</xpath>
     <value>
-      <li Class="AnimalHemogen.DietModExtension">
+      <li Class="AnimalHemogen.BloodfeederDietModExtension">
         <diet>human</diet>
       </li>
     </value>
